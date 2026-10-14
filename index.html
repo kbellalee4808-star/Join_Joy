@@ -101,6 +101,32 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--ash);color:var(--ink
 .copymsg b{color:var(--gold);font-weight:700;}
 .savehint{margin-top:11px;font-size:14px;color:#5e6e7d;line-height:1.65;}
 .savehint b{color:var(--navy);font-weight:700;}
+/* signup form mockup */
+.fsub{margin-top:8px;font-size:14.5px;color:#5e6e7d;}
+.fsub b{color:var(--gold);}
+.fm{position:relative;margin-top:14px;background:#fff;border:1.5px solid #E2E6EC;border-radius:14px;padding:22px 12px 14px;}
+.fm-tag{position:absolute;top:-11px;left:12px;background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;padding:2px 10px;border-radius:10px;}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:12px 9px;}
+.ff,.fn,.fbtn{min-width:0;}
+.full{grid-column:1/-1;}
+.fl{font-size:13.5px;font-weight:700;color:#1f2937;margin-bottom:5px;}
+.fl i{color:#e11d48;font-style:normal;margin-left:1px;}
+.fi{border:1.5px solid #D5DBE3;border-radius:9px;padding:10px 9px;font-size:14px;color:#9AA4B2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;align-items:center;gap:6px;}
+.fi.v{color:#111827;border-color:var(--gold);background:#FFFCF5;}
+.fi.sm{font-size:12.5px;}
+.fi.pw{justify-content:space-between;letter-spacing:2px;}
+.fi .eye{font-size:13px;opacity:.55;letter-spacing:0;}
+.fi .cc{color:#374151;border-right:1px solid #D5DBE3;padding-right:6px;flex-shrink:0;}
+.fi.sel{justify-content:space-between;}
+.fi.sel span{color:#6b7280;}
+.fh{margin-top:4px;font-size:12px;color:#8a6a1f;line-height:1.4;}
+.fh b{color:#b5862a;}
+.fn{font-size:12.5px;color:#6b7280;background:var(--ash);border-radius:8px;padding:7px 9px;margin-top:-2px;}
+.fn b{color:var(--navy);}
+.cap{display:flex;align-items:center;gap:10px;background:#F9F9F9;border:1px solid #D3D3D3;border-radius:4px;padding:11px 12px;font-size:14px;color:#222;max-width:270px;}
+.cap .box{width:24px;height:24px;border:2px solid #4CAF50;border-radius:3px;color:#4CAF50;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+.cap .rc{margin-left:auto;font-size:10px;color:#666;}
+.fbtn{background:#F0913A;color:#fff;text-align:center;font-weight:700;font-size:16px;border-radius:10px;padding:12px;}
 /* tip */
 .tip{display:flex;gap:11px;align-items:flex-start;background:rgba(212,169,74,.12);
   border:1px solid rgba(212,169,74,.3);border-radius:14px;padding:16px 16px;margin-top:4px;}
@@ -151,26 +177,32 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--ash);color:var(--ink
     </div>
     <!-- 1. 미리 준비할 정보 -->
     <div class="card">
-      <div class="ctitle"><span class="n">1</span>미리 준비하면 좋은 것</div>
-      <div class="rows">
-        <div class="row"><span class="e">🪪</span><div class="tx">
-          <div class="l">영문 이름 · 성</div><div class="d"><b>여권과 똑같이</b> (First / Last)</div></div></div>
-        <div class="namenote">
-          <div class="nl"><span>⚠️</span><span>First name이 <b>이름</b>, Last name이 <b>성</b>이에요. 순서를 바꿔 쓰는 분이 정말 많아요!</span></div>
-          <div class="ex">
-            <div class="exr"><span class="k">홍길동 님</span><span>이면</span></div>
-            <div class="exr"><span class="k">First name</span><span class="v">GILDONG</span><span>← 이름</span></div>
-            <div class="exr"><span class="k">Last name</span><span class="v">HONG</span><span>← 성</span></div>
-          </div>
+      <div class="ctitle"><span class="n">1</span>가입 화면 이렇게 채워요</div>
+      <p class="fsub">실제 가입 화면은 이렇게 생겼어요. <b>예시처럼</b> 채우면 돼요.</p>
+      <div class="fm" aria-label="가입 화면 예시">
+        <span class="fm-tag">예시 화면</span>
+        <div class="fg">
+          <div class="ff"><div class="fl">이름<i>*</i></div><div class="fi v">GILDONG</div><div class="fh">여권 영문 <b>이름</b></div></div>
+          <div class="ff"><div class="fl">성<i>*</i></div><div class="fi v">HONG</div><div class="fh">여권 영문 <b>성</b></div></div>
+          <div class="ff"><div class="fl">이메일<i>*</i></div><div class="fi v sm">hong@gmail.com</div><div class="fh">자주 쓰는 메일</div></div>
+          <div class="ff"><div class="fl">확인이메일<i>*</i></div><div class="fi v sm">hong@gmail.com</div><div class="fh"><b>똑같이</b> 한 번 더</div></div>
+          <div class="ff"><div class="fl">비밀번호<i>*</i></div><div class="fi v pw">••••••••<span class="eye">👁</span></div></div>
+          <div class="ff"><div class="fl">비밀번호 확인<i>*</i></div><div class="fi v pw">••••••••<span class="eye">👁</span></div></div>
+          <div class="fn full">비밀번호는 <b>8자 이상</b>, <b>문자 + 숫자</b> 섞어서</div>
+          <div class="ff"><div class="fl">국가<i>*</i></div><div class="fi v sm">Korea, Republic of</div></div>
+          <div class="ff"><div class="fl">전화번호<i>*</i></div><div class="fi v sm"><span class="cc">🇰🇷 +82</span>1012345678</div><div class="fh">맨 앞 <b>0 빼고</b> 입력</div></div>
+          <div class="ff full"><div class="fl">성별<i>*</i></div><div class="fi v sel">여성 / 남성 선택<span>⌄</span></div></div>
+          <div class="ff full"><div class="cap"><span class="box">✓</span>로봇이 아닙니다.<span class="rc">reCAPTCHA</span></div><div class="fh">⚠️ <b>꼭 체크</b>해야 가입이 돼요. 그림 퀴즈가 나오면 풀어주세요</div></div>
+          <div class="fbtn full">가입</div>
         </div>
-        <div class="row"><span class="e">📧</span><div class="tx">
-          <div class="l">이메일 주소</div><div class="d">확인 이메일도 같은 주소로</div></div></div>
-        <div class="row"><span class="e">🔒</span><div class="tx">
-          <div class="l">비밀번호</div><div class="d">8자 이상 · 문자 + 숫자 포함</div></div></div>
-        <div class="row"><span class="e">🌏</span><div class="tx">
-          <div class="l">국가 · 전화번호</div><div class="d">Korea (+82) 휴대폰 번호</div></div></div>
-        <div class="row"><span class="e">🙋</span><div class="tx">
-          <div class="l">성별</div><div class="d">성별 선택</div></div></div>
+      </div>
+      <div class="namenote">
+        <div class="nl"><span>⚠️</span><span>First name이 <b>이름</b>, Last name이 <b>성</b>이에요. 순서를 바꿔 쓰는 분이 정말 많아요!</span></div>
+        <div class="ex">
+          <div class="exr"><span class="k">홍길동 님</span><span>이면</span></div>
+          <div class="exr"><span class="k">이름 칸</span><span class="v">GILDONG</span></div>
+          <div class="exr"><span class="k">성 칸</span><span class="v">HONG</span></div>
+        </div>
       </div>
     </div>
     <!-- 2. 가입하는 법 -->
@@ -203,7 +235,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--ash);color:var(--ink
       <div class="ctitle"><span class="n">4</span>바탕화면에 깔기 (앱처럼)</div>
       <div class="dev">
         <div class="drow"><span class="e">📱</span><div class="dt"><b>아이폰</b> — 공유 버튼(⬆️) → '홈 화면에 추가'</div></div>
-        <div class="drow"><span class="e">🤖</span><div class="dt"><b>안드로이드</b> — 메뉴(⋮) → '홈 화면에 추가'</div></div>
+        <div class="drow"><span class="e">🤖</span><div class="dt"><b>안드로이드</b> — 카톡 화면에서 점 3개(⋮) → '다른 브라우저로 열기' → <b>크롬</b> 선택 → 크롬 위쪽 점 3개(⋮) → '바탕화면에 설치'</div></div>
       </div>
     </div>
     <div class="tip"><span class="e">💡</span>
